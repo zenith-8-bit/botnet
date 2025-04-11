@@ -1,7 +1,7 @@
 # Discord-Based Command & Control (C2) Prototype
 
 **⚠️ WARNING: FOR EDUCATIONAL PURPOSES ONLY**  
-This project demonstrates security concepts and should never be used for malicious purposes. Unauthorized use may violate Discord's ToS and applicable laws.
+Please i don't want to go to jail
 
 ## Overview
 
@@ -44,6 +44,7 @@ SHA256(
     MAC_address + 
     primary_disk
 )[:8]
+```
 Key Components
 Slave Features
 System fingerprinting
@@ -72,27 +73,32 @@ Discord developer account
 Bot token with message permissions
 
 Setup Commands
-bash
+``` bash
 Copy
 # Install dependencies
 pip install -r requirements.txt
-
+```
 # Configure environment
+```
 export DISCORD_TOKEN="your_bot_token"
 export WEBHOOK_URL="your_webhook_url"
+```
 Usage Examples
 Broadcast command to all slaves:
-
+```
 bash
 Copy
 python master.py send --target * --command "systeminfo"
+```
 Target specific slave:
-
+```
 bash
 Copy
 python master.py send --target a1b2c3d4 --command "ipconfig"
+```
 Monitor responses:
-
+```
 bash
 Copy
 python master.py monitor
+```
